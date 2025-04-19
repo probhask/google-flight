@@ -13,43 +13,43 @@ import {
   House as VacationIcon,
 } from "@mui/icons-material";
 
-import { ReactNode } from "react";
-
 export interface NavigationItem {
   id: string;
-  icon: ReactNode;
+  Icon: React.ElementType;
   label: string;
   path: string;
+  rotate?: boolean;
 }
 
 export const mainNavigationItems: NavigationItem[] = [
   {
     id: "travel",
-    icon: <LuggageIcon className="text-blue-700" />,
+    Icon: LuggageIcon,
     label: "Travel",
     path: "/travel",
   },
   {
     id: "explore",
-    icon: <TravelExploreIcon className="text-blue-700" />,
+    Icon: TravelExploreIcon,
     label: "Explore",
     path: "/explore",
   },
   {
     id: "flights",
-    icon: <FlightIcon className="text-blue-700 rotate-45" />,
+    Icon: FlightIcon,
     label: "Flights",
     path: "/flights",
+    rotate: true,
   },
   {
     id: "hotels",
-    icon: <HotelIcon className="text-blue-700" />,
+    Icon: HotelIcon,
     label: "Hotels",
     path: "/hotels",
   },
   {
     id: "vacations",
-    icon: <VacationIcon className="text-blue-700" />,
+    Icon: VacationIcon,
     label: "Vacation rentals",
     path: "/vacations",
   },
@@ -58,25 +58,25 @@ export const mainNavigationItems: NavigationItem[] = [
 export const secondaryNavigationItems: NavigationItem[] = [
   {
     id: "tracked",
-    icon: <TrackedIcon />,
+    Icon: TrackedIcon,
     label: "Tracked flight prices",
     path: "/tracked-prices",
   },
   {
     id: "language",
-    icon: <LanguageIcon />,
+    Icon: LanguageIcon,
     label: "Change language",
     path: "/language",
   },
   {
     id: "currency",
-    icon: <CurrencyIcon />,
+    Icon: CurrencyIcon,
     label: "Change currency",
     path: "/currency",
   },
   {
     id: "location",
-    icon: <LocationIcon />,
+    Icon: LocationIcon,
     label: "Change location",
     path: "/location",
   },
@@ -85,19 +85,19 @@ export const secondaryNavigationItems: NavigationItem[] = [
 export const bottomNavigationItems: NavigationItem[] = [
   {
     id: "settings",
-    icon: <SettingsIcon />,
+    Icon: SettingsIcon,
     label: "Flights settings",
     path: "/settings",
   },
   {
     id: "feedback",
-    icon: <FeedbackIcon />,
+    Icon: FeedbackIcon,
     label: "Feedback",
     path: "/feedback",
   },
   {
     id: "help",
-    icon: <HelpIcon />,
+    Icon: HelpIcon,
     label: "Help",
     path: "/help",
   },

@@ -63,27 +63,36 @@ const Header = () => {
             </Box>
           </Box>
 
-          <Box className="lg:flex items-center gap-2 ml-4 flex-grow hidden ">
-            {mainNavigationItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavigation(item.path)}
-                className={`
-                  flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
-                  transition-colors duration-200
-                  border border-gray-200
-                  cursor-pointer
-                  ${
-                    activeTab === item.id
-                      ? "bg-blue-50 text-blue-700"
-                      : "text-gray-600 hover:bg-blue-20"
-                  }
-                `}
-              >
-                {item.icon}
-                <span>{item.label}</span>
-              </button>
-            ))}
+          <Box className="lg:flex items-center gap-2 ml-4 flex-grow hidden">
+            {mainNavigationItems.map((item) => {
+              const isActive = activeTab === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavigation(item.path)}
+                  className={`
+                    flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
+                    transition-colors duration-200
+                    border border-neutral-200
+                    cursor-pointer
+                    ${
+                      isActive
+                        ? "bg-primary-100 text-primary-600 border-none"
+                        : "text-neutral-900 hover:bg-neutral-100"
+                    }
+                  `}
+                >
+                  <item.Icon
+                    fontSize="small"
+                    className={`
+                      ${isActive ? "text-primary-500" : "text-primary-600"}
+                      ${item.rotate ? "rotate-45" : ""}
+                    `}
+                  />
+                  <span>{item.label}</span>
+                </button>
+              );
+            })}
           </Box>
 
           <Box className="flex items-center gap-2">
