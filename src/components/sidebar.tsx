@@ -31,7 +31,7 @@ const MenuItem = ({ item, isActive, onNavigate }: MenuItemProps) => (
     <item.Icon
       fontSize="small"
       className={`
-        ${isActive ? "text-primary-600" : "text-gray-600"}
+        ${isActive ? "text-primary-600" : "text-neutral-600"}
         ${item.rotate ? "rotate-45" : ""}
       `}
     />

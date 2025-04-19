@@ -77,15 +77,15 @@ const Header = () => {
                     cursor-pointer
                     ${
                       isActive
-                        ? "bg-primary-100 text-primary-500"
-                        : "text-gray-600 hover:bg-neutral-100"
+                        ? "bg-primary-100 text-primary-600 border-none"
+                        : "text-neutral-900 hover:bg-neutral-100"
                     }
                   `}
                 >
                   <item.Icon
                     fontSize="small"
                     className={`
-                      ${isActive ? "text-primary-600" : "text-gray-600"}
+                      ${isActive ? "text-primary-500" : "text-primary-600"}
                       ${item.rotate ? "rotate-45" : ""}
                     `}
                   />
