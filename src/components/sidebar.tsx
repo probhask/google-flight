@@ -23,14 +23,18 @@ const MenuItem = ({ item, isActive, onNavigate }: MenuItemProps) => (
       w-full flex items-center gap-6 px-6 py-3 text-sm
       ${
         isActive
-          ? "bg-blue-50 text-blue-700"
+          ? "bg-primary-50 text-primary-700"
           : "text-gray-700 hover:bg-gray-100"
       }
     `}
   >
-    <span className={`${isActive ? "text-blue-700" : "text-gray-600"}`}>
-      {item.icon}
-    </span>
+    <item.Icon
+      fontSize="small"
+      className={`
+        ${isActive ? "text-primary-600" : "text-gray-600"}
+        ${item.rotate ? "rotate-45" : ""}
+      `}
+    />
     <span className="font-medium">{item.label}</span>
   </button>
 );
