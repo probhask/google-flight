@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="min-h-screen  w-screen">
       <Header />
-      <main className="relative top-16">
+      <main className="relative top-16 container mx-auto">
         <Outlet />
       </main>
     </div>
