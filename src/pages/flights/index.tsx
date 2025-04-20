@@ -1,4 +1,8 @@
-import { BannerSection, FlightExplorerSection } from "@/components";
+import {
+  BannerSection,
+  FlightExplorerSection,
+  FlightFooter,
+} from "@/components";
 import { Box } from "@mui/material";
 
 const Flights = () => {
@@ -10,6 +14,7 @@ const Flights = () => {
         <Box className="relative z-20">
           <FlightExplorerSection />
         </Box>
+        <FlightFooter />
       </Box>
     </div>
   );
